@@ -16,7 +16,8 @@ function callback(data){
   var resultElement='';
   if(data.items.length > 0){
     data.items.forEach(function(item){
-    resultElement += '<img src="'+item.snippet.thumbnails.high.url+'">';
+      resultElement += '<a href="https://www.youtube.com/watch?v='+
+        item.id.videoId+'"><img src="'+item.snippet.thumbnails.high.url+'"></a>';
     });
   }
   else
